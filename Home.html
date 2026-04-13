@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 40px;
+            border: 1px dotted black;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Home page content</h1>
+    <button onclick="btnClick()">Hide Me !!!</button>|
+    <button onclick="btnClick1()">Show Me !!!</button>|
+    <button onclick="ToggleClick()">Toggle Heading</button>|
+    <button changrtext onclick="Changetext()">Change Text</button>|
+    <button onclick="Showoutput()">Show O/p</button>
+
+    <p id="output"></p>
+
+
+
+    <script>
+
+        function btnClick(){
+            document.getElementById('heading').style.display = 'none';
+        }
+
+         function btnClick1(){
+            document.getElementById('heading').style.display = 'block';
+        }
+
+        function ToggleClick(){
+            var disp = document.getElementById('heading').style.display;
+            if(disp == 'none'){
+                document.getElementById('heading').style.display = 'block';
+            }
+            else{
+                document.getElementById('heading').style.display = 'none';      
+            }
+
+            }
+        
+    </script>
+
+    <script src="Scripts/Home.js"></script>
+</body>
+</html>
