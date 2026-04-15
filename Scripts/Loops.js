@@ -114,6 +114,83 @@ document.writeln(`spliceArray after third splice: ${spliceArray}<br>`);
 
 
 
+//Mutator functions  //array change krto
+let arr8 = [1, 2, 3];
+
+arr.push(4);     // [1,2,3,4]
+arr.pop();       // [1,2,3]
+arr.unshift(0);  // [0,1,2,3]
+arr.shift();     // [1,2,3]
+
+arr.splice(1,1); // [1,3]
+
+arr.reverse();   // [3,1]
+
+
+//Non mutator functions  //array change nahi krto
+
+let arr9 = [1, 2, 3];
+
+let newArr = arr9.map(x => x * 2); // [2,4,6]  //original array change nahi krto
+document.writeln(`newArr: ${newArr}<br>`);
+document.writeln(`original arr9: ${arr9}<br>`);
+
+let rev = arr9.reverse(); // [3,2,1]  //original array change nahi krto
+document.writeln(`rev: ${rev}<br>`);
+
+//sort method
+
+let arr10 = [3, 1, 4, 2];
+arr10.sort(); // [1, 2, 3, 4]   //original array change krto
+document.writeln(`sorted arr10: ${arr10}<br>`);
+
+//sort with string array
+let arr11 = ['banana', 'apple', 'cherry'];
+arr11.sort(); // ['apple', 'banana', 'cherry']   //original array change krto
+document.writeln(`sorted arr11: ${arr11}<br>`);
+
+//indexof method
+
+let arr12 = [1, 2, 3, 4, 5];
+let index = arr12.indexOf(3);
+document.writeln(`index of 3 in arr12: ${index}<br>`);
+
+//findindex method
+
+let arr13 = [1, 2, 3, 4, 5];
+let findIndex = arr13.findIndex(x => x > 3);  //callback function ghetla ahe jya pramane element greater than 3 ahe te find krto ani tyacha index return krto
+document.writeln(`index of first element greater than 3 in arr13: ${findIndex}<br>`);
+
+//Filter method
+
+let arr14 = [1, 2, 3, 4, 5];
+let filteredArr = arr14.filter(x => x > 3);  //callback function ghetla ahe jya pramane element greater than 3 ahe te filter krto ani tyacha array return krto
+document.writeln(`filtered array with elements greater than 3 in arr14: ${filteredArr}<br>`);
+
+//map method  //to project each element of the array into a new form and return a new array with the transformed elements
+
+let arr15 = [1, 2, 3, 4, 5];
+let mappedArr = arr15.map(x => x * 2);  //callback function ghetla ahe jya pramane element multiply by 2 krto ani tyacha array return krto
+document.writeln(`mapped array with elements multiplied by 2 in arr15: ${mappedArr}<br>`);
+
+//reduce mrthod 
+
+let arr16 = [1, 2, 3, 4, 5];
+let sum = arr16.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+document.writeln(`sum of elements in arr16: ${sum}<br>`);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
